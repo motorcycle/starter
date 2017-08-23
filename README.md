@@ -1,5 +1,7 @@
 # Motorcycle.ts Starter
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/motorcyclets/starter.svg)](https://greenkeeper.io/)
+
 An unopinionated, clone-able starter repository for Motorcycle.ts configured with webpack.
 
 ## Usage
