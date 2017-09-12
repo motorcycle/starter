@@ -1,10 +1,28 @@
-import { DomSinks, DomSources, makeDomComponent } from '@motorcycle/mostly-dom'
+import { UI, UISinks, UISources } from '@base/ui'
 
-import { UI } from './UI'
+import { Application } from '@base/application'
+import { constant } from '@motorcycle/stream'
+import { createDocumentDomSource } from '@motorcycle/dom'
+import { makeDomComponent } from '@motorcycle/mostly-dom'
 import { run } from '@motorcycle/run'
 
-const element = document.querySelector('#app-container')
+const rootCssSelector = `#app`
+const element = document.querySelector(rootCssSelector)
 
-if (!element) throw new Error('could not find element')
+if (!element) throw new Error(`Unable to find element '${rootCssSelector}'`)
 
-run<DomSources, DomSinks>(UI, makeDomComponent(element))
+const Dom = makeDomComponent(element)
+
+function Effects(sinks: UISinks): UISources {
+  const { view$ } = sinks
+
+  const document$ = constant(document, view$)
+
+  return {
+    ...Dom(sinks),
+    ...Application(sinks),
+    document: createDocumentDomSource(document$),
+  }
+}
+
+run<UISources, UISinks>(UI, Effects)

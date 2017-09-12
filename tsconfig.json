@@ -11,7 +11,13 @@
     "noImplicitAny": true,
     "sourceMap": true,
     "noUnusedParameters": true,
-    "noUnusedLocals": true
+    "noUnusedLocals": true,
+    "baseUrl": "./src",
+    "paths": {
+      "@base/*": [
+        "*"
+      ]
+    }
   },
   "include": [
     "src/**/*.ts"

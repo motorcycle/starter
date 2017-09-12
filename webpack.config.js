@@ -29,6 +29,9 @@ module.exports = {
   resolve: {
     mainFields: ['module', 'jsnext:main', 'browser', 'main'],
     extensions: ['.ts', '.js'],
+    alias: {
+      '@base': path.resolve(__dirname, 'src/')
+    }
   },
   output: {
     filename: 'bundle.js',
