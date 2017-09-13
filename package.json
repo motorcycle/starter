@@ -16,7 +16,7 @@
     "ts-loader": "2.3.7",
     "typescript": "2.5.2",
     "webpack": "3.5.6",
-    "webpack-dev-server": "2.7.1"
+    "webpack-dev-server": "2.8.0"
   },
   "dependencies": {
     "@motorcycle/dom": "16.0.0",
