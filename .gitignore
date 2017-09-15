@@ -40,6 +40,7 @@ jspm_packages
 lib
 lib.es2015
 .tmp
+.cache-loader
 
 # other stuff
 src/test.ts

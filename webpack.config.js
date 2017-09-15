@@ -1,5 +1,7 @@
 const path = require('path')
+const os = require('os')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
+const ForkTsCheckerWebpackPlugin = require('fork-ts-checker-webpack-plugin')
 
 const srcPath = path.join(__dirname, 'src')
 
@@ -9,14 +11,44 @@ const HtmlOptions = {
   template: path.join(srcPath, 'index.ejs'),
 }
 
+const entry = path.join(srcPath, 'bootstrap.ts')
+
 module.exports = {
-  entry: './src/bootstrap.ts',
-  plugins: [new HtmlWebpackPlugin(HtmlOptions)],
+  entry,
+  plugins: [
+    new HtmlWebpackPlugin(HtmlOptions),
+    new ForkTsCheckerWebpackPlugin({ checkSyntacticErrors: true }),
+  ],
   module: {
     rules: [
       {
         test: /\.ts?$/,
-        use: ['@motorcycle/loader', 'ts-loader'],
+        use: [
+          {
+            loader: 'cache-loader',
+          },
+          {
+            loader: 'thread-loader',
+            options: {
+              // there should be 1 cpu for the fork-ts-checker-webpack-plugin
+              workers: os.cpus().length - 1,
+            },
+          },
+          {
+            loader: '@motorcycle/loader',
+            options: {
+              entries: [
+                entry
+              ]
+            }
+          },
+          {
+            loader: 'ts-loader',
+            options: {
+              happyPackMode: true, // IMPORTANT! use happyPackMode mode to speed-up compilation and reduce errors reported to webpack
+            },
+          },
+        ],
         exclude: /node_modules/,
       },
     ],
@@ -30,8 +62,8 @@ module.exports = {
     mainFields: ['module', 'jsnext:main', 'browser', 'main'],
     extensions: ['.ts', '.js'],
     alias: {
-      '@base': path.resolve(__dirname, 'src/')
-    }
+      '@base': path.resolve(__dirname, 'src/'),
+    },
   },
   output: {
     filename: 'bundle.js',
