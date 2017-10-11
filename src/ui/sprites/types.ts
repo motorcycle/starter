@@ -1,3 +1,3 @@
-import { NonnegativeInteger } from '@base/common/types'
+import { NonnegativeInteger } from 'common/types'
 
 export type Degrees = NonnegativeInteger

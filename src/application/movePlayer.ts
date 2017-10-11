@@ -1,6 +1,6 @@
 import { Direction, Maze, MovePlayer, State } from './types'
 import { curry, equals, increment, map } from '167'
-import { isLevelCompleted, tryMove } from '@base/domain/model'
+import { isLevelCompleted, tryMove } from 'domain/model'
 
 import { adjacentLocation } from './adjacentLocation'
 import { mazeWithBoxes } from './mazeWithBoxes'

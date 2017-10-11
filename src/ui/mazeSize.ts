@@ -1,4 +1,4 @@
-import { Maze } from '@base/application/types'
+import { Maze } from 'application/types'
 import { MazeSize } from './types'
 import { TILE_SIZE } from './constants'
 import { length } from '167'

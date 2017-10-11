@@ -2,7 +2,7 @@ import { TILE_CENTER, TILE_SIZE } from '../constants'
 import { VNode, svg } from '@motorcycle/mostly-dom'
 
 import { Degrees } from './types'
-import { Direction } from '@base/application/types'
+import { Direction } from 'application/types'
 
 const { rect, circle, g, path } = svg
 

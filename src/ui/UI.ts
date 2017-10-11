@@ -17,7 +17,7 @@ import { directionKeys, key, keyed, resetKeys, startKeys } from './interaction'
 import { id, increment, not } from '167'
 import { sokoban, startScreen } from './views'
 
-import { Direction } from '@base/application/types'
+import { Direction } from 'application/types'
 import { NO_LEVEL } from './constants'
 import { Stream } from '@motorcycle/types'
 import { canIncrementLevel } from './canIncrementLevel'

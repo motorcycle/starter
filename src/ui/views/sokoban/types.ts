@@ -1,6 +1,6 @@
 import { MazeSize } from '../../types'
-import { NonnegativeInteger } from '@base/common/types'
-import { Seconds } from '@base/application/types'
+import { NonnegativeInteger } from 'common/types'
+import { Seconds } from 'application/types'
 import { VNode } from '@motorcycle/mostly-dom'
 import { VNodes } from '../types'
 

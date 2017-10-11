@@ -1,6 +1,6 @@
 import { blank, box, ground, storage, wall } from './'
 
-import { Tile } from '@base/application/types'
+import { Tile } from 'application/types'
 import { VNode } from '@motorcycle/mostly-dom'
 
 export const sprites: { [key in Tile]: (playerOrBlank: VNode, key: string) => VNode } = {

@@ -1,9 +1,9 @@
-import { Boxes, Coordinate, Direction, Maze, State } from '@base/domain/model'
+import { Boxes, Coordinate, Direction, Maze, State } from 'domain/model'
 import { EffectfulComponent, Stream } from '@motorcycle/types'
-import { NonnegativeInteger, PositiveInteger } from '@base/common/types'
+import { NonnegativeInteger, PositiveInteger } from 'common/types'
 
 // Re-export, so UI doesn’t query the domain directly.
-export * from '@base/domain/model/types'
+export * from 'domain/model/types'
 
 export type ApplicationComponent = EffectfulComponent<ApplicationSinks, ApplicationSources>
 

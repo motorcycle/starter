@@ -25,16 +25,6 @@ module.exports = {
         test: /\.ts?$/,
         use: [
           {
-            loader: 'cache-loader',
-          },
-          {
-            loader: 'thread-loader',
-            options: {
-              // there should be 1 cpu for the fork-ts-checker-webpack-plugin
-              workers: os.cpus().length - 1,
-            },
-          },
-          {
             loader: '@motorcycle/loader',
             options: {
               entries: [
@@ -45,7 +35,7 @@ module.exports = {
           {
             loader: 'ts-loader',
             options: {
-              happyPackMode: true, // IMPORTANT! use happyPackMode mode to speed-up compilation and reduce errors reported to webpack
+              happyPackMode: true,
             },
           },
         ],
@@ -62,7 +52,11 @@ module.exports = {
     mainFields: ['module', 'jsnext:main', 'browser', 'main'],
     extensions: ['.ts', '.js'],
     alias: {
-      '@base': path.resolve(__dirname, 'src/'),
+      // "@": srcPath,
+      application: path.join(srcPath, 'application'),
+      common: path.join(srcPath, 'common'),
+      domain: path.join(srcPath, 'domain'),
+      ui: path.join(srcPath, 'ui')
     },
   },
   output: {

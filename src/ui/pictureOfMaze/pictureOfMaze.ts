@@ -1,6 +1,6 @@
 import { flatten, map } from '167'
 
-import { State } from '@base/application/types'
+import { State } from 'application/types'
 import { VNode } from '@motorcycle/mostly-dom'
 import { VNodes } from '../views/types'
 import { drawRow } from './drawRow'

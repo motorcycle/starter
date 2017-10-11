@@ -1,8 +1,8 @@
-import { ApplicationSinks, ApplicationSources, Level } from '@base/application/types'
+import { ApplicationSinks, ApplicationSources, Level } from 'application/types'
 import { DomSinks, DomSources } from '@motorcycle/mostly-dom'
 
 import { DomSource } from '@motorcycle/dom'
-import { NonnegativeInteger } from '@base/common/types'
+import { NonnegativeInteger } from 'common/types'
 
 export type UISources = DomSources &
   ApplicationSources & { readonly document: DomSource<Document, Event> }

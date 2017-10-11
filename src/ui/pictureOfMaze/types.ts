@@ -1,6 +1,6 @@
-import { Coordinate, Direction, Longitude, Tile } from '@base/application/types'
+import { Coordinate, Direction, Longitude, Tile } from 'application/types'
 
-import { Dimension } from '@base/common/types'
+import { Dimension } from 'common/types'
 import { VNodes } from '../views/types'
 
 export type DrawRow = {

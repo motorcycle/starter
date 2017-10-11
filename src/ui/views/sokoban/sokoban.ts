@@ -1,7 +1,7 @@
 import { VNode, div } from '@motorcycle/mostly-dom'
 
 import { MazeSize } from '../../types'
-import { NonnegativeInteger } from '@base/common/types'
+import { NonnegativeInteger } from 'common/types'
 import { SokobanView } from './types'
 import { VNodes } from '../types'
 import { completedAllLevels } from './completedAllLevels'

@@ -14,8 +14,17 @@
     "noUnusedLocals": true,
     "baseUrl": "./src",
     "paths": {
-      "@base/*": [
-        "*"
+      "application/*": [
+        "./application/*"
+      ],
+      "common/*": [
+        "./common/*"
+      ],
+      "domain/*": [
+        "./domain/*"
+      ],
+      "ui/*": [
+        "./ui/*"
       ]
     }
   },

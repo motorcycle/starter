@@ -2,7 +2,7 @@ import { Coordinate, Maze, MoveBox } from './types'
 import { curry, equals, length } from '167'
 
 import { BLANK } from './constants'
-import { tryMove } from '@base/domain/model'
+import { tryMove } from 'domain/model'
 
 export const moveBox: MoveBox = curry(function moveBox(
   maze: Maze,

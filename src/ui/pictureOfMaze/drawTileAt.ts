@@ -1,4 +1,4 @@
-import { Coordinate, Direction, Tile } from '@base/application/types'
+import { Coordinate, Direction, Tile } from 'application/types'
 import { blank, player, sprites } from '../sprites'
 
 import { VNode } from '@motorcycle/mostly-dom'

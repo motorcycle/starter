@@ -1,7 +1,7 @@
-import { Coordinate, Direction, Latitude, Longitude, Tile } from '@base/application/types'
+import { Coordinate, Direction, Latitude, Longitude, Tile } from 'application/types'
 import { curry, map } from '167'
 
-import { Dimension } from '@base/common/types'
+import { Dimension } from 'common/types'
 import { DrawRow } from './types'
 import { VNodes } from '../views/types'
 import { drawTileAt } from './drawTileAt'

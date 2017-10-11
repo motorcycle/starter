@@ -1,4 +1,4 @@
-import { Matrix2D, NonnegativeInteger } from '@base/common/types'
+import { Matrix2D, NonnegativeInteger } from 'common/types'
 
 export type Mazes = ReadonlyArray<Maze>
 

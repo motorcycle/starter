@@ -1,6 +1,6 @@
-import { UI, UISinks, UISources } from '@base/ui'
+import { UI, UISinks, UISources } from 'ui'
 
-import { Application } from '@base/application'
+import { Application } from 'application'
 import { constant } from '@motorcycle/stream'
 import { createDocumentDomSource } from '@motorcycle/dom'
 import { makeDomComponent } from '@motorcycle/mostly-dom'

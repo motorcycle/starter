@@ -1,4 +1,4 @@
-import { NonnegativeInteger } from '@base/common/types'
+import { NonnegativeInteger } from 'common/types'
 import { Time } from './types'
 
 export function secondsToTime(seconds: NonnegativeInteger): Time {

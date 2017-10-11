@@ -1,1 +1,1 @@
-export * from '@base/domain/model/constants'
+export * from 'domain/model/constants'
