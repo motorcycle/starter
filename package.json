@@ -8,7 +8,7 @@
   "license": "MIT",
   "devDependencies": {
     "@motorcycle/loader": "3.0.0",
-    "@motorcycle/test": "2.1.0",
+    "@motorcycle/test": "3.0.0",
     "fork-ts-checker-webpack-plugin": "0.2.8",
     "happypack": "4.0.0",
     "html-webpack-plugin": "2.30.1",
