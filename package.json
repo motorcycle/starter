@@ -25,7 +25,7 @@
     "@motorcycle/mostly-dom": "4.1.0",
     "@motorcycle/run": "4.1.0",
     "@motorcycle/stream": "2.1.0",
-    "@motorcycle/types": "2.1.0"
+    "@motorcycle/types": "3.0.0"
   },
   "lint-staged": {
     "*.ts": [
