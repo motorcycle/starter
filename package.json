@@ -13,7 +13,7 @@
     "happypack": "4.0.0",
     "html-webpack-plugin": "2.30.1",
     "husky": "0.14.3",
-    "lint-staged": "4.2.3",
+    "lint-staged": "5.0.0",
     "prettier": "1.7.4",
     "ts-loader": "2.3.7",
     "typescript": "2.5.3",
